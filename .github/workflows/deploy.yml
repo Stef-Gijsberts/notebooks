@@ -1,0 +1,32 @@
+name: Deploy Notebooks to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Clojure
+        uses: DeLaGuardo/setup-clojure@v1
+        with:
+          java-version: "17"
+          clojure-version: "1.11.1"
+
+      - name: Install dependencies
+        run: clojure -P
+
+      - name: Build Clerk notebooks
+        run: clojure -M -m build/build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
