@@ -5,8 +5,7 @@
   {:exec-fn nextjournal.clerk/serve!
    :exec-args {:browse true :watch-paths ["notebooks"]}}
   :build
-  {:extra-paths ["build"]
-   :exec-fn nextjournal.clerk/build!
+  {:exec-fn nextjournal.clerk/build!
    :exec-args {:paths ["notebooks/link/stef/notes/*"]
                :index "notebooks/link/stef/notes/index.clj"
                :output-dir "docs"

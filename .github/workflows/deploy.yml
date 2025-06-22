@@ -22,7 +22,7 @@ jobs:
         run: clojure -P
 
       - name: Build Clerk notebooks
-        run: clojure -M -m build/build
+        run: clojure -X:build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
