@@ -10,5 +10,5 @@
   [:p "There are no notes yet, just a structure!"]
   [:p "If you are interested in how I created these pages, have a look at the source code!"]
   [:ul
-   [:li [:a {:href (clerk/doc-url "notebooks/")} "Home"]]
+   [:li [:a {:href (clerk/doc-url "/")} "Home"]]
    [:li [:a {:href (clerk/doc-url "notebooks/hello")} "Hello"]]]])
