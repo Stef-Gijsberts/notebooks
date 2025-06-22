@@ -8,6 +8,6 @@
   {:exec-fn nextjournal.clerk/build!
    :exec-args {:paths ["notebooks/link/stef/notes/*"]
                :index "notebooks/link/stef/notes/index.clj"
-               :output-dir "docs"
-               :package :single-file
+               :out-path "docs"
+               :package :directory
                :verbose? true}}}}
