@@ -1,4 +1,4 @@
-(ns hello
+(ns notes.hello
   (:require [nextjournal.clerk :as clerk]))
 
 (def greeting "Hello")

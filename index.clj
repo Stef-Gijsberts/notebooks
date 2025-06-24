@@ -9,6 +9,6 @@
  [:div [:h1 "Welcome!"]
   [:p "There are no notes yet, just a structure!"]
   [:p "If you are interested in how I created these pages, have a look at the source code!"]
+  [:h2 "Notes"]
   [:ul
-   [:li [:a {:href (clerk/doc-url "")} "Home"]]
-   [:li [:a {:href (clerk/doc-url "notebooks/hello")} "Hello"]]]])
+   [:li [:a {:href (clerk/doc-url "notes/hello")} "Hello"]]]])

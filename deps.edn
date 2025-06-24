@@ -1,13 +1,14 @@
-{:paths ["notebooks"]
+{:paths ["notes"]
  :deps {io.github.nextjournal/clerk {:mvn/version "0.17.1102"}}
  :aliases
  {:dev
   {:exec-fn nextjournal.clerk/serve!
-   :exec-args {:browse true :watch-paths ["notebooks"]}}
-  :build
+   :exec-args {:browse true}}
+  :nextjournal/clerk
   {:exec-fn nextjournal.clerk/build!
-   :exec-args {:paths ["notebooks/*"]
-               :index "notebooks/index.clj"
+   :exec-args {:paths [
+                       "index.clj"
+                       "notes/hello.clj"]
                :out-path "docs"
                :package :directory
                :verbose? true}}}}
