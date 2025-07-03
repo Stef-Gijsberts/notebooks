@@ -9,7 +9,7 @@
   {:exec-fn nextjournal.clerk/build!
    :exec-args {:paths [
                        "index.clj"
-                       "notes/hello.clj"]
+                       "notes/*.clj"]
                :out-path "docs"
                :package :directory
                :verbose? true}}}}
