@@ -19,5 +19,5 @@ clj -X:dev
 ### Build release
 
 ```bash
-clj -X:build
+clj -X:nextjournal/clerk
 ```
